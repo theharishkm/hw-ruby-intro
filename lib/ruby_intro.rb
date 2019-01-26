@@ -53,10 +53,17 @@ end
 # Part 2
 
 def hello(name)
+  myString = "Hello, " + name
+  return myString
   # YOUR CODE HERE
 end
 
 def starts_with_consonant? s
+  if s[0]= /[A-Z&&[^AEIOU]]/i || s[0]= /[a-z&&[^aeiou]]/i
+    return true
+  else
+    return false
+  end
   # YOUR CODE HERE
 end
 
