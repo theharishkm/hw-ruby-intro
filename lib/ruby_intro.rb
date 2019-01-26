@@ -68,6 +68,13 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
+  binary_string=s.unpack("B*")
+  converted_to_integer=string_to_int(binary_string)
+  if converted_to_integer%4==0
+    return true
+  else
+    return false
+  end
   # YOUR CODE HERE
 end
 
