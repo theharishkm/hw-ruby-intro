@@ -2,20 +2,26 @@
 
 # Part 1
 
-def sum arr
-  array_size={arr.size}
-  array_sum=0
-  while array_size>=0
-    array_sum=array_sum+arr[array_size]
-    array_size=array_size-1
+def sum(arr)
+  if arr.size==nil
+    return 0
+  elsif arr.size==0
+    return arr[0]
+  else
+   array_size={arr.size}
+   array_sum=0
+   while array_size>=0
+     array_sum=array_sum+arr[array_size]
+     array_size=array_size-1
+    end
+    return array_sum
   end
-  return array_sum
   # YOUR CODE HERE
 end
 
-def max_2_sum arr
+def max_2_sum(arr)
   arr.sort
-  array_size1={arr.size}
+  array_size1=arr.size
   if array_size1>=1
     array_sum1=arr[array_size1]-arr[array_size1-1]
   elsif array_size1=0
@@ -27,13 +33,13 @@ def max_2_sum arr
   # YOUR CODE HERE
 end
 
-def sum_to_n? arr, n
-  size={arr.size}
+def sum_to_n?(arr, n)
+  size=arr.size
   if size<0
     return false
   else
     while size>=0
-     size1={arr.size}
+     size1=arr.size
      comparator=arr[size]+arr[size1]
      while n!=comparator
        if n==comparator
