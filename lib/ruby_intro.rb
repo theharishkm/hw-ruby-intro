@@ -1,32 +1,30 @@
 # When done, submit this entire file to the autograder.
 
 # Part 1
-
+#This part is self explanatory
 def sum arr
   if arr.size==nil
     return 0
   else
    return arr.sum
   end
-  # YOUR CODE HERE
 end
 
+#Taking maximum 2 nos and returning their sum
 def max_2_sum arr
   arr.sort
   array_size=arr.size
   if array_size>=1
-    #return arr.max_2_sum
     reduced_array=arr.max(2)
-    return reduced_array.sum # array_sum1=arr[array_size]-arr[array_size-1]
+    return reduced_array.sum 
   elsif arr.empty?
-    return 0 #array_sum1=arr[array_size1]
+    return 0 
   else
     return arr[0]
   end
-  # return array_sum1
-  # YOUR CODE HERE
 end
 
+#Checking different combinations to see whether any equals n
 def sum_to_n? arr, n
   if arr.empty?
    return false
@@ -37,13 +35,13 @@ def sum_to_n? arr, n
 end
 
 # Part 2
-
+#This part is self explanatory
 def hello(name)
   myString = "Hello, " + name
   return myString
-  # YOUR CODE HERE
 end
 
+#I am checking whether the first letter matches any of the consonants
 def starts_with_consonant? s
   if s.empty?
     return false
@@ -52,31 +50,19 @@ def starts_with_consonant? s
   else
     return false
   end
-  # YOUR CODE HERE
 end
 
+#This part is self explanatory
 def binary_multiple_of_4? (s)
 	return true if s == "0"
 	/^[10]*00$/.match(s) != nil
 end
 
-=begin
-def binary_multiple_of_4? s
-  binary_string=s.unpack("B*")
-  converted_to_integer=string_to_int(binary_string)
-  if converted_to_integer%4==0
-    return true
-  else
-    return false
-  end
-  # YOUR CODE HERE
-end
-=end
+
 
 # Part 3
-
+#This part is self explanatory, defining a simple class
 class BookInStock
-
 	attr_accessor :isbn
 	attr_accessor :price
 
@@ -90,5 +76,4 @@ class BookInStock
 	def price_as_string
 		sprintf("$%2.2f", @price)
 	end
-# YOUR CODE HERE
 end
